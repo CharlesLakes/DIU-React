@@ -46,7 +46,7 @@ const HomePage = () => {
               <ListItemIcon>
                 <TaskIcon />
               </ListItemIcon>
-              <ListItemText primary="Tareas asignadas" />
+              <ListItemText primary="Tareas" />
             </ListItemButton>
           </ListItem>
           <ListItem 

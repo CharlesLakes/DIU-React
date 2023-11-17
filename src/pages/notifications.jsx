@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Paper } from '@mui/material';
 
 const NotificationsTitleStyles = {
     borderBottom:"solid 1px black",
@@ -12,11 +13,11 @@ const NotificationsTitleStyles = {
 };
 
 const NotificationsListItemStyles = {
-    border: "solid 1px black",
     width: "300px",
     padding: "10px",
     boxSizing: "border-box",
-    textAlign: "center"
+    textAlign: "center",
+    margin: "10px 0px"
 };
 
 const Notifications = () => {
@@ -28,12 +29,12 @@ const Notifications = () => {
             <div className='menu'>
                 <h2 style={NotificationsTitleStyles}>Notificaciones</h2>
                 <div>
-                    <p style={NotificationsListItemStyles}>
+                    <Paper style={NotificationsListItemStyles}>
                         Tienes una reunión sobre "SCRUM y Gestion de Proyectos" el dia 23-10-2023 a las 12:00hrs
-                    </p>
-                    <p style={NotificationsListItemStyles}>
+                    </Paper>
+                    <Paper style={NotificationsListItemStyles}>
                         Tienes una reunión sobre "Gestión de pagos" el día 29-10-2023 a las 16:00hrs
-                    </p>
+                    </Paper>
                 </div>
             </div>
         </div>

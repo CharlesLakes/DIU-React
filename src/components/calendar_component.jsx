@@ -33,6 +33,24 @@ const CalendarComponent = () => {
         data: 'Reunión Gestion de Pagos',
       });
     }
+    else if (isoDate === '2023-11-21') {
+      setDataForDate({
+        date: date,
+        data: 'Reunión Gestion de Pagos',
+      });
+    }
+    else if (isoDate === '2023-11-23') {
+      setDataForDate({
+        date: date,
+        data: 'Reunión Gestion de Organizacion y Equipos',
+      });
+    }
+    else if (isoDate === '2023-11-24') {
+      setDataForDate({
+        date: date,
+        data: 'Reunión SCRUM y Gestion de Proyectos',
+      });
+    }
      else {
       setDataForDate({
         date: date,
@@ -48,8 +66,9 @@ const CalendarComponent = () => {
   };
 
   const customTileContent = ({ date }) => {
-    const hasData = date.toISOString().split('T')[0] === '2023-10-10' || date.toISOString().split('T')[0] === '2023-10-15' || date.toISOString().split('T')[0] === '2023-10-23' || date.toISOString().split('T')[0] === '2023-10-29';
-
+    const dates = new Set(['2023-10-10', '2023-10-15', '2023-10-23', '2023-10-29', '2023-11-21', '2023-11-23', '2023-11-24'])
+    const aux = date.toISOString().split('T')[0]
+    const hasData = dates.has(aux)
     return (
       <div>
         {hasData && <EventIcon style={{ color: 'red' }} />}
